@@ -64,7 +64,7 @@ public class Context {
     /**
      * The entrance node of current invocation tree.
      */
-    private DefaultNode entranceNode;
+    private final DefaultNode entranceNode;
 
     /**
      * Current processing entry.

@@ -36,7 +36,9 @@ class CtEntry extends Entry {
 
     protected Entry parent = null;
     protected Entry child = null;
-
+    /**
+     * 一个资源创建一个slot chain
+     */
     protected ProcessorSlot<Object> chain;
     protected Context context;
     protected LinkedList<BiConsumer<Context, Entry>> exitHandlers;
@@ -49,7 +51,6 @@ class CtEntry extends Entry {
         super(resourceWrapper, count, args);
         this.chain = chain;
         this.context = context;
-
         setUpEntryFor(context);
     }
 
